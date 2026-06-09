@@ -120,10 +120,7 @@ Execute the isolated tracking process targeting the standard DNP3 control channe
 sudo tshark -i lo -d tcp.port==20000,dnp3 -O dnp3 port 20000
 
 # Terminal 2: Initialize the outstation mimic
-python scripts/dnp3_server.py
-
-# Terminal 3: Fire the link query sequence
-python scripts/dnp3_client.py
+python scripts/dnp3_master_mimic.py
 
 ```
 
@@ -173,10 +170,10 @@ Run the tracking sequence against the standard control execution interface:
 sudo tshark -i lo -d tcp.port==44818,enip -O enip port 44818
 
 # Terminal 2: Run the controller emulation layer
-python scripts/enip_server.py
+python scripts/eip_server_mimic.py
 
 # Terminal 3: Fire the tracking session request
-python scripts/enip_client.py
+python scripts/eip_session_mimic.py
 
 ```
 
@@ -228,10 +225,10 @@ Because S7Comm targets a privileged low-range infrastructure port, the receiver 
 sudo tshark -i lo -d tcp.port==102,tpkt -O s7comm port 102
 
 # Terminal 2: Initialize the hardware mimic (Requires administrative privilege)
-sudo python scripts/s7_server.py
+sudo python scripts/s7_server_mimic.py
 
 # Terminal 3: Dispatch the connection request sequence
-python scripts/s7_client.py
+python scripts/s7_client_mimic.py
 
 ```
 
@@ -296,10 +293,10 @@ Execute the isolated testing trace targeting the standard OPC UA endpoint:
 sudo tshark -i lo -d tcp.port==4840,opcua -O opcua port 4840
 
 # Terminal 2: Initialize the secure endpoint mimic
-python scripts/opcua_server.py
+python scripts/opcua_server_mimic.py
 
 # Terminal 3: Fire the unencrypted tracking handshake
-python scripts/opcua_client.py
+python scripts/opcua_client_mimic.py
 
 ```
 
