@@ -8,7 +8,7 @@ By stripping away heavy vendor software and abstraction layers, this lab utilize
 
 If you want the complete, deep-dive architectural analysis, byte-by-byte hex mappings, and structural telemetry, go straight to the master manual:
 
-👉 **[Read the Complete Reference Manual (NOTES.md)](https://www.google.com/search?q=NOTES.md)**
+👉 **[Read the Complete Reference Manual (NOTES.md)](https://github.com/404saint/raw-industrial-protocols/blob/main/NOTES.md)**
 
 To view, modify, or execute the raw socket manipulation and injection templates used across the lab blocks, browse the source code directory:
 
