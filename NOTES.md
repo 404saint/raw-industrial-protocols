@@ -249,16 +249,6 @@ OPC UA completely discards legacy serial layouts, register boundaries, and old W
 
 ### The Plaintext Handshake Architecture
 
-<details>
-<summary>📸 Click to view Live Terminal Capture (tshark verification)</summary>
-
-### OPC UA Pristine Native Dissection Tree
-> **Environment:** `saint@404saint` | Interface: `lo` | Filter: `port 4840`
-
-![OPC UA Live Packet Capture Verification](assets/screenshots/opcua_tshark_success.png)
-
-</details>
-
 Before an encrypted session begins (or when running on a policy of `None`), an OPC UA client and server execute a raw binary socket exchange over TCP port 4840:
 
 ```text
@@ -269,6 +259,16 @@ OPN (OpenSecureChannel) -> Structural token and certificate mapping phase.
 ```
 
 ### Raw Handshake Byte Anatomy
+
+<details>
+<summary>📸 Click to view Live Terminal Capture (tshark verification)</summary>
+
+### OPC UA Pristine Native Dissection Tree
+> **Environment:** `saint@404saint` | Interface: `lo` | Filter: `port 4840`
+
+![OPC UA Live Packet Capture Verification](assets/screenshots/opcua_tshark_success.png)
+
+</details>
 
 The standardized 32-byte layout initializing the **Hello (`HEL`)** sequence:
 
