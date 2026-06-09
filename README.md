@@ -12,7 +12,7 @@ If you want the complete, deep-dive architectural analysis, byte-by-byte hex map
 
 To view, modify, or execute the raw socket manipulation and injection templates used across the lab blocks, browse the source code directory:
 
-👉 **[Browse the Script Templates (/scripts)](https://www.google.com/search?q=scripts/)**
+👉 **[Browse the Script Templates (/scripts)](https://github.com/404saint/raw-industrial-protocols/tree/main/scripts)**
 Here is the complete `README.md` for **`raw-industrial-protocols`**. It has been structured to perfectly mirror the formatting, tone, and high-signal layout of your GNS3 lab documentation.
 
 ---
@@ -58,14 +58,13 @@ The testing environment relies on host-isolated loopback interfaces to establish
 
 ## Protocol Target Matrix
 
-| Protocol | Evaluation Mode | Default Port | Primary Test Script Layer |
-| --- | --- | --- | --- |
-| **Modbus/TCP** | Register Polling / MBAP Framing | `502` | `scripts/modbus/` |
-| **DNP3** | EPA Stack / Link Status Queries | `20000` | `scripts/dnp3/` |
-| **EtherNet/IP** | Session Registration Tracking | `44818` | `scripts/enip/` |
-| **S7Comm** | Nested ISO-TSAP Negotiations | `102` | `scripts/s7comm/` |
-| **OPC UA** | Native Binary Plaintext Backdoors | `4840` | `scripts/opcua/` |
-
+| Protocol | Evaluation Mode | Default Port |
+| :--- | :--- | :--- |
+| **Modbus/TCP** | Register Polling / MBAP Framing | `502` |
+| **DNP3** | EPA Stack / Link Status Queries | `20000` |
+| **EtherNet/IP** | Session Registration Tracking | `44818` |
+| **S7Comm** | Nested ISO-TSAP Negotiations | `102` |
+| **OPC UA** | Native Binary Plaintext Backdoors | `4840` |
 ---
 
 ## 👨‍💻 Author
